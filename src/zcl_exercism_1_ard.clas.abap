@@ -46,7 +46,7 @@ CLASS zcl_exercism_1_ard IMPLEMENTATION.
     DATA itab_data_type TYPE initial_type.
     DATA initial_data TYPE itab_data_type.
 
-    INSERT VALUE #( group = 'A' number = 10 description = 'Group A-22' ) INTO TABLE initial_data.
+    INSERT VALUE #( group = 'A' number = 10 description = 'Group A-2' ) INTO TABLE initial_data.
     INSERT VALUE #( group = 'B' number = 5 description = 'Group B' ) INTO TABLE initial_data.
     INSERT VALUE #( group = 'A' number = 6 description = 'Group A-1' ) INTO TABLE initial_data.
     INSERT VALUE #( group = 'C' number = 22 description = 'Group C-1' ) INTO TABLE initial_data.
