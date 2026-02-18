@@ -65,14 +65,14 @@ CLASS zcl_exercism_1_ard IMPLEMENTATION.
 
 *Ordenando a tabela
 
-SORT updated_data BY group ASCENDING number DESCENDING.
+    SORT updated_data BY group ASCENDING number DESCENDING.
 
-out->write( updated_data ).
+    out->write( updated_data ).
 
-DATA temp_data TYPE itab_data_type.
+    DATA temp_data TYPE itab_data_type.
 
-READ TABLE updated_data INTO itab_data_type WITH KEY number = 6.
-out->write( sy-tabix ).
+    READ TABLE updated_data INTO itab_data_type WITH KEY number = 6.
+    out->write( sy-tabix ).
 
   ENDMETHOD.
 ENDCLASS.
