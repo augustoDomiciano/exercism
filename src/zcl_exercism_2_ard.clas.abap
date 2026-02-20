@@ -80,6 +80,20 @@ CLASS zcl_exercism_2_ard IMPLEMENTATION.
   DATA(itab) = aggregated_data.
 
   INSERT VALUE #( group = 'A' count = count_groupsA ) INTO itab INDEX 1.
+  INSERT VALUE #( group = 'B' count = count_groupsB ) INTO itab INDEX 2.
+  INSERT VALUE #( group = 'C' count = count_groupsC ) INTO itab INDEX 3.
+
+  out->write( itab ).
+
+  DATA wa TYPE initial_numbers_type.
+
+  DATA(sum_val) = REDUCE i( INIT len = 0
+                            FOR <line> IN initial_numbers2
+                            WHERE ( group = 'A' )
+                            NEXT len = len + <line>-number
+                          ).
+
+  out->write( sum_val ).
 
   out->write( itab ).
 
